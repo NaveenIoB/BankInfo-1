@@ -50,7 +50,7 @@ pipeline {
             steps {
               sh  "git clone https://github.com/gowthamvishnu/BankInfo-1.git"
               sh  "cd BankInfo-1"
-              sh  "cp /var/lib/jenkins/workspace/multibranch pipeline/target/BankInfo-0.0.1-SNAPSHOT.jar ."
+              sh  "cp /var/lib/jenkins/workspace/multibranch_pipeline_master/target/BankInfo-0.0.1-SNAPSHOT.jar ."
               sh  "sudo docker build -t bankinfoimage ." 
               sh  "sudo docker run -itd --name bankinfocontainer -p 3333:8989 bankinfoimage"
              }
