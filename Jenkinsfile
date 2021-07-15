@@ -6,7 +6,7 @@ pipeline {
      stages {
         stage ("cloning git repo") {
             steps {
-               git 'https://github.com/gowthamvishnu/BankInfo-1.git'   
+               git branch: 'master', url: 'https://github.com/gowthamvishnu/BankInfo-1.git'    
             }          
         }
         stage ("building & testing the code with sonar") {
