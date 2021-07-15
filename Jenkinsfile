@@ -4,7 +4,7 @@ pipeline {
       PATH ="/usr/share/maven/bin:$PATH" 
      }
      stages {
-        stage ("SCM") {
+        stage ("cloning git repo") {
             steps {
                git 'https://github.com/gowthamvishnu/BankInfo-1.git'   
             }          
